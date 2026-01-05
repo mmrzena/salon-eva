@@ -35,7 +35,24 @@ export default function Home() {
       "opens": "09:00",
       "closes": "18:00"
     },
-    "description": "Psí salon Eva v Jičíně nabízí kompletní péči o vašeho psa s více jak 15 lety zkušeností. Koupání španělskou kosmetikou PSH, stříhání, úprava srsti s individuálním přístupem.",
+    "description": "Psí salon Eva v Jičíně nabízí kompletní péči o vašeho psa s více jak 20 lety zkušeností. Koupání španělskou kosmetikou PSH, stříhání, úprava srsti s individuálním přístupem.",
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Čekárna",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Oplocená zahrada pro psy",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Parkování",
+        "value": true
+      }
+    ],
     "founder": {
       "@type": "Person",
       "name": "Eva Mrzenová"
@@ -94,7 +111,7 @@ export default function Home() {
               Služby
             </a>
           </div>
-          <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-4 text-sm text-[#785b49] sm:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-4 text-sm text-[#785b49] sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-2xl border border-black/5 bg-white/80 p-5 transition-shadow hover:shadow-lg">
               <p className="font-semibold text-[#1b1b1b]">Individuální přístup</p>
               <p className="mt-1">Každý pes má svůj rytmus</p>
@@ -104,8 +121,12 @@ export default function Home() {
               <p className="mt-1">Jemná k pokožce i srsti</p>
             </div>
             <div className="rounded-2xl border border-black/5 bg-white/80 p-5 transition-shadow hover:shadow-lg">
-              <p className="font-semibold text-[#1b1b1b]">Tiché prostředí</p>
-              <p className="mt-1">Bez stresu a spěchu</p>
+              <p className="font-semibold text-[#1b1b1b]">Oplocená zahrada</p>
+              <p className="mt-1">Bezpečný prostor pro psy</p>
+            </div>
+            <div className="rounded-2xl border border-black/5 bg-white/80 p-5 transition-shadow hover:shadow-lg">
+              <p className="font-semibold text-[#1b1b1b]">Snadné parkování</p>
+              <p className="mt-1">Pohodlný přístup k salonu</p>
             </div>
           </div>
         </section>
@@ -192,6 +213,10 @@ export default function Home() {
               <div>
                 <p className="font-semibold text-[#1b1b1b]">Praktická domluva</p>
                 <p>Termíny sjednáte jednoduše po telefonu.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-[#1b1b1b]">Pohodlné zázemí</p>
+                <p>Čekárna, oplocená zahrada pro psy a snadné parkování.</p>
               </div>
             </div>
           </div>
