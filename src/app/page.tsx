@@ -55,15 +55,16 @@ export default function Home() {
       <header className="sticky top-0 z-20 border-b border-black/5 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
           <div className="flex items-center">
-            <a href="#" className="cursor-pointer" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              <img src="/text-style-logo.svg" alt="Psí salon Eva" className="h-12 w-auto sm:h-14" />
+            <a href="#" className="flex items-center  cursor-pointer" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <img src="/text-style-logo.svg" alt="Psí salon Eva" className="h-10 w-auto sm:h-12" />
+              <img src="/dog.svg" alt="" className="h-10 w-10 sm:h-12 sm:w-12 opacity-80" />
             </a>
           </div>
           <a
             href="tel:605213768"
-            className="rounded-full border border-[#785b49]/40 px-5 py-2 text-sm font-semibold text-[#785b49] transition-colors hover:border-[#785b49]/70"
+            className="rounded-full border border-[#785b49]/40 px-4 py-2 text-sm font-semibold text-[#785b49] transition-colors hover:border-[#785b49]/70 sm:px-5"
           >
-            Objednání: 605 213 768
+            <span className="hidden sm:inline">Objednání: </span>605 213 768
           </a>
         </div>
       </header>
@@ -71,7 +72,7 @@ export default function Home() {
       <main>
         <section className="mx-auto max-w-4xl px-6 pb-16 pt-16 text-center lg:pt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#785b49]">
-            Jičín · Více jak 15 let zkušeností
+            Jičín · Více jak 20 let zkušeností
           </p>
           <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             Ostříhaný pes, spokojený pes.
