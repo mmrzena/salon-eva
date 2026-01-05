@@ -1,10 +1,14 @@
+'use client';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,#ffffff,#fff6dd)] text-[#1b1b1b]">
       <header className="sticky top-0 z-20 border-b border-black/5 bg-white/70 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
           <div className="flex items-center">
-            <img src="/text-style-logo.svg" alt="Psí salon Eva" className="h-12 w-auto sm:h-14" />
+            <a href="#" className="cursor-pointer" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <img src="/text-style-logo.svg" alt="Psí salon Eva" className="h-12 w-auto sm:h-14" />
+            </a>
           </div>
           <a
             href="tel:605213768"
@@ -16,55 +20,42 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-16 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#785b49]">
-              Jičín · Více jak 15 let zkušeností
-            </p>
-            <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Ostříhaný pes, spokojený pes.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#785b49]">
-              Profesionální péče s individuálním přístupem.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="tel:605213768"
-                className="inline-flex items-center justify-center rounded-full bg-[#ffbe31] px-6 py-3 text-sm font-semibold text-[#1b1b1b] transition-colors hover:bg-[#f0ad1f]"
-              >
-                Rezervovat termín
-              </a>
-              <a
-                href="#sluzby"
-                className="inline-flex items-center justify-center rounded-full border border-[#785b49]/40 px-6 py-3 text-sm font-semibold text-[#785b49] transition-colors hover:border-[#785b49]"
-              >
-                Služby
-              </a>
-            </div>
-            <div className="mt-10 grid grid-cols-1 gap-4 text-sm text-[#785b49] sm:grid-cols-3">
-              <div className="rounded-2xl border border-black/5 bg-white/80 p-4">
-                <p className="font-semibold text-[#1b1b1b]">Individuální přístup</p>
-                <p>Každý pes má svůj rytmus</p>
-              </div>
-              <div className="rounded-2xl border border-black/5 bg-white/80 p-4">
-                <p className="font-semibold text-[#1b1b1b]">Šetrná kosmetika</p>
-                <p>Jemná k pokožce i srsti</p>
-              </div>
-              <div className="rounded-2xl border border-black/5 bg-white/80 p-4">
-                <p className="font-semibold text-[#1b1b1b]">Tiché prostředí</p>
-                <p>Bez stresu a spěchu</p>
-              </div>
-            </div>
+        <section className="mx-auto max-w-4xl px-6 pb-16 pt-16 text-center lg:pt-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#785b49]">
+            Jičín · Více jak 15 let zkušeností
+          </p>
+          <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            Ostříhaný pes, spokojený pes.
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#785b49]">
+            Profesionální péče s individuálním přístupem.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <a
+              href="tel:605213768"
+              className="inline-flex items-center justify-center rounded-full bg-[#ffbe31] px-6 py-3 text-sm font-semibold text-[#1b1b1b] transition-colors hover:bg-[#f0ad1f]"
+            >
+              Rezervovat termín
+            </a>
+            <a
+              href="#sluzby"
+              className="inline-flex items-center justify-center rounded-full border border-[#785b49]/40 px-6 py-3 text-sm font-semibold text-[#785b49] transition-colors hover:border-[#785b49]"
+            >
+              Služby
+            </a>
           </div>
-
-          <div className="rounded-3xl border border-black/5 bg-white/80 p-10 shadow-[0_20px_60px_rgba(27,27,27,0.08)]">
-            <div className="aspect-square rounded-2xl bg-[#ffbe31]/20 p-10">
-              <img src="/dog.svg" alt="Upravený pes" className="h-full w-full object-contain" />
+          <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-4 text-sm text-[#785b49] sm:grid-cols-3">
+            <div className="rounded-2xl border border-black/5 bg-white/80 p-5 transition-shadow hover:shadow-lg">
+              <p className="font-semibold text-[#1b1b1b]">Individuální přístup</p>
+              <p className="mt-1">Každý pes má svůj rytmus</p>
             </div>
-            <div className="mt-6 text-sm text-[#785b49]">
-              <p className="font-semibold text-[#1b1b1b]">Psí salon Eva</p>
-              <p>Na Tobolce 200, Jičín</p>
-              <p>Dle objednávek</p>
+            <div className="rounded-2xl border border-black/5 bg-white/80 p-5 transition-shadow hover:shadow-lg">
+              <p className="font-semibold text-[#1b1b1b]">Šetrná kosmetika</p>
+              <p className="mt-1">Jemná k pokožce i srsti</p>
+            </div>
+            <div className="rounded-2xl border border-black/5 bg-white/80 p-5 transition-shadow hover:shadow-lg">
+              <p className="font-semibold text-[#1b1b1b]">Tiché prostředí</p>
+              <p className="mt-1">Bez stresu a spěchu</p>
             </div>
           </div>
         </section>
@@ -134,7 +125,14 @@ export default function Home() {
               <p className="mt-3 text-sm text-[#785b49]">
                 Každý rok si obnovuji certifikace a jdu s trendy ve stříhání.
               </p>
-              <p className="mt-4 text-sm font-semibold text-[#1b1b1b]">Eva Mrzenová</p>
+              <div className="mt-6 flex items-center gap-4">
+                <img
+                  src="/eva.png"
+                  alt="Eva Mrzenová"
+                  className="h-20 w-20 rounded-full object-cover border-2 border-[#785b49]/20"
+                />
+                <p className="text-sm font-semibold text-[#1b1b1b]">Eva Mrzenová</p>
+              </div>
             </div>
             <div className="grid gap-6 text-sm text-[#785b49]">
               <div>
@@ -173,16 +171,21 @@ export default function Home() {
                 <p>Dle objednávek</p>
               </div>
             </div>
-            <div className="rounded-3xl border border-black/5 bg-[#785b49] p-10 text-white">
-              <p className="text-sm uppercase tracking-[0.32em] text-white/60">Objednání</p>
-              <p className="mt-4 text-3xl font-semibold">605 213 768</p>
-              <p className="mt-3 text-sm text-white/70">Zavolejte a domluvíme vhodný termín.</p>
-              <a
-                href="tel:605213768"
-                className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#ffbe31] px-6 py-3 text-sm font-semibold text-[#1b1b1b] transition-colors hover:bg-[#f0ad1f]"
-              >
-                Zavolat
-              </a>
+            <div className="relative overflow-hidden rounded-3xl border border-black/5 bg-[#785b49] p-10 text-white">
+              <div className="absolute right-0 top-0 opacity-20">
+                <img src="/dog.svg" alt="Pes" className="h-40 w-40" />
+              </div>
+              <div className="relative z-10">
+                <p className="text-sm uppercase tracking-[0.32em] text-white/60">Objednání</p>
+                <p className="mt-4 text-3xl font-semibold">605 213 768</p>
+                <p className="mt-3 text-sm text-white/70">Zavolejte a domluvíme vhodný termín.</p>
+                <a
+                  href="tel:605213768"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#ffbe31] px-6 py-3 text-sm font-semibold text-[#1b1b1b] transition-colors hover:bg-[#f0ad1f]"
+                >
+                  Zavolat
+                </a>
+              </div>
             </div>
           </div>
         </section>
