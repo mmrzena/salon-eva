@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://psi-salon-eva.cz/sitemap.xml
+Sitemap: https://psisaloneva.cz/sitemap.xml

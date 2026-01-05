@@ -4,10 +4,10 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://psi-salon-eva.cz",
+    "@id": "https://psisaloneva.cz",
     "name": "Psí salon Eva",
-    "image": "https://psi-salon-eva.cz/logo.svg",
-    "url": "https://psi-salon-eva.cz",
+    "image": "https://psisaloneva.cz/logo.svg",
+    "url": "https://psisaloneva.cz",
     "telephone": "+420605213768",
     "priceRange": "$$",
     "address": {

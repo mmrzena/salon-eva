@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "cs_CZ",
-    url: "https://psi-salon-eva.cz",
+    url: "https://psisaloneva.cz",
     siteName: "Psí salon Eva",
     title: "Psí salon Eva Jičín | Profesionální péče o vašeho psa",
     description: "Psí salon Eva v Jičíně - více jak 15 let zkušeností. Koupání, stříhání, úprava srsti s individuálním přístupem. Objednávky: 605 213 768",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     images: ["/logo.svg"],
   },
   alternates: {
-    canonical: "https://psi-salon-eva.cz",
+    canonical: "https://psisaloneva.cz",
   },
   other: {
     "geo.region": "CZ-KH",
