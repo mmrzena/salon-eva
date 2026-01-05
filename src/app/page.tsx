@@ -1,8 +1,57 @@
 'use client';
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://psi-salon-eva.cz",
+    "name": "Psí salon Eva",
+    "image": "https://psi-salon-eva.cz/logo.svg",
+    "url": "https://psi-salon-eva.cz",
+    "telephone": "+420605213768",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Na Tobolce 200",
+      "addressLocality": "Jičín",
+      "postalCode": "506 01",
+      "addressCountry": "CZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.4372,
+      "longitude": 15.3517
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "description": "Psí salon Eva v Jičíně nabízí kompletní péči o vašeho psa s více jak 15 lety zkušeností. Koupání španělskou kosmetikou PSH, stříhání, úprava srsti s individuálním přístupem.",
+    "founder": {
+      "@type": "Person",
+      "name": "Eva Mrzenová"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Jičín"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,#ffffff,#fff6dd)] text-[#1b1b1b]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <header className="sticky top-0 z-20 border-b border-black/5 bg-white/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
           <div className="flex items-center">
@@ -73,7 +122,7 @@ export default function Home() {
             {[
               {
                 title: "Koupání a sušení",
-                text: "Šetrné šampony, profesionální sušení a ochrana pokožky.",
+                text: "Španělská kosmetika PSH, profesionální sušení a ochrana pokožky.",
               },
               {
                 title: "Stříhání a styling",
@@ -88,12 +137,8 @@ export default function Home() {
                 text: "Jemná péče s důrazem na prevenci.",
               },
               {
-                title: "Dentální hygiena",
-                text: "Základní čištění pro svěží dech a zdravé dásně.",
-              },
-              {
                 title: "Kompletní balíček",
-                text: "Nejkomplexnější péče v jednom termínu.",
+                text: "Koupání, sušení, stříhání a kompletní péče v jednom termínu.",
               },
             ].map((service) => (
               <div
